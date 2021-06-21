@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background-color: #091921;
+}
+
+.calculator {
+  width: 500px;
+  height: 700px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(60px, auto);
+  grid-template-areas:
+    "input input input input"
+    "clear clear c plus "
+    "seven eight nine minus"
+    "four five six multiply"
+    "one two three divide"
+    "zero dot result result";
+}
+
+button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #0c2835;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-size: 2em;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+input {
+  grid-area: input;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #03b1ff;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.c {
+  grid-area: c;
+}
+
+.clear {
+  grid-area: clear;
+  background-color: #ff3077;
+}
+
+.result {
+  grid-area: result;
+  background-color: #03b1ff;
+}
+
+@media (max-width: 518px) {
+  .calculator {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .calculator {
+    width: 80vw;
+    height: 50vh;
+  }
+}
